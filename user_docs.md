@@ -62,7 +62,7 @@ singularity shell library://collection/container:tag
 ## Pushing Containers to the Registry
 Any user with the IDIA/ilifu user account is able to login and push images to their collections.
 
-### Adding remote end-point (also refer to https://docs.sylabs.io/guides/3.7/user-guide/endpoint.html)
+### Adding remote end-point (also see this [guide](https://docs.sylabs.io/guides/3.7/user-guide/endpoint.html)).
 
 To Add the registry end-point, run:
 ```bash
@@ -93,15 +93,12 @@ singularity remote login idia-registry.
 ### Create a collection
 To create a collection login via the [webUI](https://sregistry.idia.ac.za). Go to [View Collection](https://sregistry.idia.ac.za/collections) or select containers from the top menu. You Should see the “New Collection” button. Use this to create a collection. A collection name should all be in small letters and must not have the “/” or ”.” characters.
 
-Walt confirm this 
-Here is an example of the collection page.
-
-
-Push the container to your collection:
-NB. You can only push containers to the collections you created, or one to which your group has been assigned.
+### Push the container to your collection:
+**NB**. You can only push containers to the collections you created, or one to which your group has been assigned.
 
 Make sure the end point is added successfully. 
-You can check the remote status via; singularity remote use idia-registry, then singularity remote status and output would look like.
+You can check the remote status via; `singularity remote use idia-registry`, then `singularity remote status` and output would look like.
+```
 INFO:    Checking status of default remote.
 SERVICE    STATUS  VERSION  URI
 Keyserver  OK      v1.0.0   https://sregistry.idia.ac.za
@@ -110,20 +107,16 @@ Token      OK      v1.0.0   https://sregistry.idia.ac.za
 INFO:    Access Token Verified!
 
 Valid authentication token set (logged in).
-This means you are ready to push images.
-
-
-
-To push a container named “astror” to a collection “calibration” (as shown in the screenshot above), run:
+```
+This means you are ready to push images.<br />
+To push a container named `astror` to a collection `calibration` (as shown in the screenshot above), run:
+```bash
 singularity push -U ASTRO-R.simg library://walter/calibration/astror:latest
- 
-In this command: ASTRO-R is the local name of the container that I want to push, walter - is my username, calibration is the name of the collection I am pushing the image to, astror is the name a container will have in the registry, latest is the tag of the container. 
+```
+In this command: `ASTRO-R`is the local name of the container that I want to push, `walter` - is my username, `calibration` is the name of the collection I am pushing the container to, `astror` is the name a container will have in the IDIA sregistry, `latest` is the tag of the container. 
 See the screenshot below to demonstrate the container has been uploaded.. 
 
- 
-
-
-Team/Group Container Management
+## Team/Group Container Management
 A team (group of users) can be created to manage a collection specific to a project and multiple users must manage it. A team is created by an authenticated user. Creating a team means that the creator becomes the Owner of the team that can add and remove users. A user in a group then has the ability to push containers to the collection and also has permissions to view private containers.
 
 Create a Teams:
