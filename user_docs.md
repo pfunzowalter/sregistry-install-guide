@@ -120,12 +120,12 @@ See the screenshot below to demonstrate the container has been uploaded..
 A team (group of users) can be created to manage a collection specific to a project and multiple users must manage it. A team is created by an authenticated user. Creating a team means that the creator becomes the Owner of the team that can add and remove users. A user in a group then has the ability to push containers to the collection and also has permissions to view private containers.
 
 Create a Teams:
-Go to webUI:https://sregistry.idia.ac.za/
-Click on the “Teams” tab in the navigation bar
-Choose a name, team name, and image.
-Decide if your team is “open” or “invite” only
-invite only means that an owner must send an invitation link.
-open means that anyone can join the team that is authenticated in the registry
+- Go to webUI:https://sregistry.idia.ac.za/
+- Click on the “Teams” tab in the navigation bar
+- Choose a name, team name, and image.
+- Decide if your team is “open” or “invite” only
+- **invite** only means that an owner must send an invitation link.
+- **open** means that anyone can join the team that is authenticated in the registry
 
 
 
