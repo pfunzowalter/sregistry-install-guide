@@ -59,36 +59,39 @@ singularity shell library://collection/container:tag
 **Note**: containers used this way are stored in a local cache (usually `$HOME/.singularity/cache` if an alternative is not set using `SINGULARITY_CACHEDIR`). The storage used for this can grow considerably over time and we recommend using `singularity cache clean -a` to remove images after use.
  
 
-Pushing Containers to the Registry
+## Pushing Containers to the Registry
 Any user with the IDIA/ilifu user account is able to login and push images to their collections.
 
-Adding remote end-point (also refer to https://docs.sylabs.io/guides/3.7/user-guide/endpoint.html)
+### Adding remote end-point (also refer to https://docs.sylabs.io/guides/3.7/user-guide/endpoint.html)
 
 To Add the registry end-point, run:
+```bash
 singularity remote add idia-registry https://sregistry.idia.ac.za/
-
-It will ask for an access token. This token can be accessed by going to the webUI. Click login and once you have logged in there will be a dropdown menu from your username at the top right. Click this drop down button and select Token.
-
-Copy the token (it will look something like: 742a2ca17065a2d0137f24ec30455a4a3cd3fe2e) to the clipboard and paste it on the terminal. You should receive confirmation that the token is verified, as follows:.
-	Generate an access token at https://sregistry.idia.ac.za/auth/tokens, and paste it here.
+```
+It will ask for an access token. This token can be accessed by going to the [webUI](https://sregistry.idia.ac.za). Click login and once you have logged-in there will be a dropdown menu from your username at the top right. Click this drop down button and select Token. Copy the token (it will look something like: `742a2ca17065a2d0137f24ec30455a4a3cd3fe2e`) to the clipboard and paste it on the terminal. You should receive confirmation that the token is verified, as follows:.
+```
+Generate an access token at https://sregistry.idia.ac.za/auth/tokens, and paste it here.
 Token entered will be hidden for security.
 Access Token: 
 INFO:    Access Token Verified!
 INFO:    Token stored in /users/walter/.singularity/remote.yaml
+```
 
 If you get an issue like:
-	INFO:    Remote "idia-registry" added.
+```
+INFO:    Remote "idia-registry" added.
 Generate an access token at https://sregistry.idia.ac.za/auth/tokens, and paste it here.
 Token entered will be hidden for security.
 Access Token: 
 FATAL:   while verifying token: error response from server: Invalid Credentials
+```
 Try updating the token and login to the endpoint. Since it is already created, there is no need to add it again:
-
+```bash
 singularity remote login idia-registry.
+```
 
-
-Create a collection
-To create a collection login via the webUI. Go to View Collection or select containers from the top menu. You Should see the “New Collection” button. Use this to create a collection. A collection name should all be in small letters and must not have the “/” or ”.” characters.
+### Create a collection
+To create a collection login via the [webUI](https://sregistry.idia.ac.za). Go to [View Collection](https://sregistry.idia.ac.za/collections) or select containers from the top menu. You Should see the “New Collection” button. Use this to create a collection. A collection name should all be in small letters and must not have the “/” or ”.” characters.
 
 Walt confirm this 
 Here is an example of the collection page.
