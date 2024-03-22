@@ -16,41 +16,47 @@ Contacts ilifu support at support@ilifu.ac.za to get help with uploading or down
 `Tag` is the version of the primary software package included in the container (example v6.5.0), a date to indicate different builds (2023-01-23), or another custom versioning method.<br />
 `Team` is a group of users that can be assigned as collaborators to a collection.
 
-Available Collections:
+## Available Collections
 To view available containers visit our web UI at https://sregistry.idia.ac.za/collections. All container-collections listed are publicly available.
 
-Access/Download Available Containers:
+## Access/Download Available Containers:
 All containers listed in the collection page are available for use by the public. Containers can be pulled to the local machine using the Singularity CE pull only. 
 
 Example:
-Run this cmd to pull/download a “container” in “collection” with “tag”.
+Run this `cmd`to pull/download a `container` in `collection` with `tag`.
+```bash
 singularity pull --library https://sregistry.idia.ac.za/ collection/container:tag
-
-To pull a container called wsclean with a tag v3.3 in a collection called busybox, We use the cmd:
-
+```
+To pull a container called `wsclean` with a tag `v3.3` in a collection called `busybox`, We use the cmd:
+```bash
 singularity pull --library https://sregistry.idia.ac.za/ busybox/wsclean:v3.3
+```
 
-If you have already added the remote endpoint, you can pull the same container using the cmd below (See https://docs.sylabs.io/guides/3.7/user-guide/endpoint.html for details about adding an end-point, also see below about adding IDIA sregistry end-point):
-
+If you have already added the **remote endpoint**, you can pull the same container using the cmd below (See https://docs.sylabs.io/guides/3.7/user-guide/endpoint.html for details about adding an end-point, also see below about adding IDIA sregistry end-point):
+```bash
 singularity pull library://busybox/wsclean:v3.3
-
-*Note: most public containers available in the IDIA sregistry are also available on ilifu at /idia/software/containers. Please confirm whether the container already exists on the filesystem before pulling the container to ilifu storage. 
+```
+**Note**: most public containers available in the IDIA sregistry are also available on ilifu at `/idia/software/containers`. Please confirm whether the container already exists on the filesystem before pulling the container to ilifu storage. 
 
 Containers from the repository can be used within a job step, without creating the container image file, using the following examples: 
 
 Run the container:
+```bash
 singularity run --library https://sregistry.idia.ac.za/ collection/container:tag
-
-Similarly if the registry end-point already exist then: 
+```
+Similarly if the registry end-point already exist then:
+```bash
 singularity run library://collection/container:tag
-
-	Shell into the container:
-		singularity shell --library https://sregistry.idia.ac.za/ collection/container:tag
-
-Similarly if the registry end-point already exist then: 
+```
+Shell into the container:
+```bash
+singularity shell --library https://sregistry.idia.ac.za/ collection/container:tag
+```
+Similarly if the registry end-point already exist then:
+```bash
 singularity shell library://collection/container:tag
-
-*Note: containers used this way are stored in a local cache (usually $HOME/.singularity/cache if an alternative is not set using SINGULARITY_CACHEDIR). The storage used for this can grow considerably over time and we recommend using `singularity cache clean -a` to remove images after use.
+```
+**Note**: containers used this way are stored in a local cache (usually `$HOME/.singularity/cache` if an alternative is not set using `SINGULARITY_CACHEDIR`). The storage used for this can grow considerably over time and we recommend using `singularity cache clean -a` to remove images after use.
  
 
 Pushing Containers to the Registry
