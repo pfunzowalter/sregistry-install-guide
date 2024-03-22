@@ -1,22 +1,20 @@
-SREGISTRY USE CASES
+## IDIA Singularity Registry Server 
 
-IDIA Singularity Registry Server 
+The IDIA Singularity Registry Server (IDIA sregistry) is available for managing, organising, and sharing Singularity container images. Ilifu users are able to upload containers and maintain their own teams and collections. Public containers are available to be downloaded to any remote site using Singularity CE software.
 
-The IDIA Singularity Registry Server is available for managing, organising, and sharing Singularity container images. Ilifu users are able to upload containers and maintain their own teams and collections. Public containers are available to be downloaded to any remote site using Singularity CE software.
-
-Requirements
+## Requirements
 
 An ilifu user account is required to upload containers to the IDIA Singularity Registry repository.
-For containers to be uploaded to the IDIA Singularity Registry repository, the containers must have been built using Singularity version 3.3.0+
+For containers to be uploaded to the IDIA Singularity Registry repository, the containers must have been built using Singularity `version 3.3.0+`
 
-Support Contacts: email support@ilifu.ac.za
+## Support
+Contacts ilifu support at support@ilifu.ac.za to get help with uploading or downloading containers from IDIA sregistry
 
-Definitions:
-
-Collection describes a class of containers, or a project group for which containers are created. A collection can be public or private, and, if private, only the creator, or assigned group, will have access to the collection.
-Container_name, is the name of the container (this is usually the name of the primary software, the project group for which the container is created, or a custom name if the container includes multiple software packages without a clear primary packages), 
-Tag is the version of the primary software package included in the container (example v6.5.0), a date to indicate different builds (2023-01-23), or another custom versioning method.
-Team is a group of users that can be assigned as collaborators to a collection.
+## Definitions
+`Collection` describes a class of containers, or a project group for which containers are created. A collection can be public or private, and, if private, only the creator, or assigned group, will have access to the collection.<br />
+`Container_name`, is the name of the container (this is usually the name of the primary software, the project group for which the container is created, or a custom name if the container includes multiple software packages without a clear primary packages).<br />
+`Tag` is the version of the primary software package included in the container (example v6.5.0), a date to indicate different builds (2023-01-23), or another custom versioning method.<br />
+`Team` is a group of users that can be assigned as collaborators to a collection.
 
 Available Collections:
 To view available containers visit our web UI at https://sregistry.idia.ac.za/collections. All container-collections listed are publicly available.
